@@ -1,0 +1,346 @@
+/* Inicio Estilos Gerais */
+  * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .whatsapp {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    right: 150px;
+    bottom: 150px;
+  }
+
+/* Fim Estilos Gerais */
+
+/* Inicio Banner */
+
+  .topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 0 ;
+  }
+
+  .topo > a {
+    text-align: -webkit-center;
+  }
+
+  .topo > a > img {
+    width: 30%;
+    min-width: 300px;
+  }
+
+  .topo > div{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: -60px;
+  }
+
+  .rotating-text {
+    display: flex;
+    flex-direction: row;
+    font-size: larger;
+  }
+  .rotating-text code {
+    margin-left: 10px;
+    margin-top: -65px;
+  }
+  .rotating-text code .word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+  }
+  .rotating-text code .word .letter {
+    transform-origin: center center 25px;
+  }
+  .rotating-text code .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 1.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+  }
+  .rotating-text code .word .letter.in {
+    transition: 1.38s ease;
+  }
+  .rotating-text code .word .letter.behind {
+    transform: rotateX(-90deg);
+  }
+
+  .alizarin {
+    color: #00A3BA;
+  }
+
+/* Fim Banner */
+
+
+/* Intro. */
+  .intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 320px;
+  }
+
+  .img-projetos > code{
+    text-align: center;
+    font-size: 1.125em;
+    margin-top: 30px;
+  }
+  
+  .img-projetos > img {
+    max-width: 300px;
+  }
+/* Fim Intro. */
+
+/* Rodapé */
+  .rodape {
+    padding: 30px;
+    justify-self: center;
+    align-self: center;
+    color: slategray;
+  }
+/* Fim Rodapé. */
+
+/* Inicio Conteudo Home */
+  .bk{
+    background-image: url('../img/bk.png');
+    background-repeat: repeat-x;
+    background-size: 50%;
+  }
+
+  .conteudo{
+    padding: 120px 0;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-content: center;
+  }
+
+  .conteudo > div {
+    margin: 100px 50px 0 50px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .conteudo .iconify {
+    margin-bottom: 20px;
+  }
+
+  .box-conteudo {
+    
+    border-bottom-style: solid;
+    border-image: linear-gradient(to left, white 1%, #00A3BA 30%, white 100%) 
+    0 0 100% 0/0 0 1px 0;
+    transition-delay: 1s;  
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+/* Fim Conteudo Home */
+
+/* Inicio Responsivo. */
+  @media (max-width: 1024px) {
+    .conteudo {
+      padding: 100px 0 ;
+    }
+
+    .tecnologia{
+      line-height: 26px;
+    }
+
+    .conteudo2 {
+      padding: 20px 0;
+    }
+
+    .descricao-projeto {
+      width: 10%;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .topo {
+      padding: 0;
+      margin-top: 30px;
+    }
+    .bk {
+      background-repeat: repeat;
+    }
+    .conteudo{
+      padding: 0;
+      display: block;
+      text-align: -webkit-center;
+    }
+
+    .img-projetos > img {
+      margin: 20px 0;
+    }
+
+    .descricao-projeto > div{
+      flex-direction: column;
+    }
+
+    .descricao-projeto .desc-cliente{
+      margin: 0;
+    }
+
+    .descricao-projeto > div > h2{
+      margin-bottom: 10px;
+    }
+
+    .cliente{
+      margin-top: 10px;
+    }
+
+    .container .conteudo2 {
+      width: 80%;
+    }
+
+  }
+
+  @media (max-width: 450px) {
+
+    .conteudo > div {
+      margin: 50px 0;
+    }
+    .projetos-andamento {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .projetos-andamento .iconify {
+      width: 60px; 
+      height: 60px;
+      margin-bottom: 15px;
+      align-self: flex-start;
+    }
+
+    .container .conteudo2 .descricao-projeto .descricao-title {
+      flex-direction: column;
+      align-items: flex-start;
+
+    }
+
+    .container .descricao-projeto .desc-cliente {
+      margin: 0;
+    }
+  }
+/* Fim Responsivo. */
+
+/* Inicio Estilos Gerais. */
+  .conteudo2{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .conteudo2 > div {
+    display: flex;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .box-projetos{
+    text-align: start;
+    background-image: url('../img/bk.png');
+    background-repeat: repeat;
+    background-size: 100%;
+  }
+
+  .projetos-andamento{
+    padding: 20px;
+
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+  }
+
+  .projetos-andamento > div {
+    display: flex;
+  }
+
+  .iconify {
+    width: 100px; 
+    height: 100px;
+    color: #00A3BA;
+    align-self: center;
+  }
+
+  .descricao-projeto {
+    margin: 0 auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+  }
+
+  .descricao-projeto > div{
+    display: flex;
+
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  .descricao-projeto > div > a {
+    text-decoration: none;
+  }
+
+  .desc-projetos > p {
+    margin-bottom: 15px;
+  }
+
+  .container .descricao-projeto .descricao-title {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+  .descricao-projeto .desc-cliente {
+    margin-left: 15px;
+  }
+  .desc-cliente{
+    padding: 3px;
+    color: #00A3BA;
+    font-size: 1.125em;
+    font-weight: normal;
+    background: black;
+    border-radius: 5px;
+  }
+
+  .tecnologia{
+    padding: 4px;
+    font-size: 0.875em;
+    font-weight: normal;
+    background: rgb(74, 74, 75, 0.3);
+    border-radius: 5px;
+  }
+/* Inicio Estilos Gerais. */
